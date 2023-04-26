@@ -44,7 +44,9 @@ def CreatePieces():
     return [FourFlat,SmallS,SmallL,T,Q,BigS,SmallsTail,BigL,U,Lequal]
     
 if __name__ == "__main__":
-    userDate = input('Calendar puzzle date to solve (ex: 31/01/2022): ')
+    #userDate = input('Calendar puzzle date to solve (ex: 31/01/2022): ')
+    #use today's date if no date is provided
+    userDate = datetime.now().strftime("%d/%m/%Y")
     try:
         date = datetime.strptime(userDate,"%d/%m/%Y")
     except ValueError:
